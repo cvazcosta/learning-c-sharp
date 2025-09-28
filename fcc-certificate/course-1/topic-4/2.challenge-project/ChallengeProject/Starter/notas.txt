@@ -1,0 +1,40 @@
+Para a nova versão do app eu irei precisar de 3 novas variáveis:
+
+- Valor do Exam Score
+- Valor do Extra Credit (que é a média das notas das tarefas de crédito extra)
+- Points (que é a diferença entre o Overall Grade e o Exam Score)
+
+A questão se resume a pensar na forma das etapas intermediárias considerando que o código atual realiza o somatório das pontuações de exames e atividades extras de uma vez.
+
+Eu poderia no loop interno manter ainda o cálculo de sumAssignmentScores, visto que preciso obter o Overall Grade, mas quando eu entrar no else, seria importante obter o valor do Extra Credit
+  Pra isso eu preciso: 
+    - Obter o somatório da pontuação de todas as atividades de crédito extra;
+    - Contabilizar o número de atividades de crédito extra;
+    - Efetuar a divisão dos dois valores acima;
+
+Lógica similar eu posso aplicar no cálculo do Exam Score
+  Ao entrar no if eu poderia obter o somatório da pontuação de todos os exames e depois dividir esse valor por examAssignments.
+
+Para amanhã 23/09:
+
+Identificar quais variáveis eu preciso criar para obter esses valores. Não é hora de implementar lógica de cálculo.
+
+O objetivo dessa tarefa é:
+
+- declarar e inicializar quaisquer outras variáveis de inteiro necessárias para calcular as somas.
+- declarar e inicializar quaisquer outras variáveis decimais necessárias para cálculos e/ou valores de relatório de pontuações.
+
+As que eu consigo pensar hoje:
+
+- Contador de atividades de crédito extra (int);
+- Somatório das notas das atividades de crédito extra (int);
+- Somatório das notas dos exames (int);
+
+- Exam Score (decimal);
+- Extra Credit (decimal);
+- Points (decimal);
+
+```C#
+Console.WriteLine("Student\t\tExam Score\t\tOverall Grade\tExtra Credit\n");
+```
+
