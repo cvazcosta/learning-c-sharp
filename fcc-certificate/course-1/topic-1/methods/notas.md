@@ -1,4 +1,4 @@
-# Métodos em C#
+# Métodos em C-Sharp
 
 O objetivo do capítulo foi o de mostrar os dois tipos de métodos presentes na linguagem C# e as diferentes formas pelas quais eles podem ser declarados, segundo a sintaxe correta.
 
