@@ -1,29 +1,36 @@
 ﻿string? userInput;
+string formattedInput = "";
 bool validInput = false;
 
-Console.WriteLine("Inform your role:");
 Console.WriteLine("- Administrator");
 Console.WriteLine("- Manager");
 Console.WriteLine("- User");
 
-userInput = Console.ReadLine();
-
-if (userInput != null)
+do
 {
-  // userInput.ToLower();
-  Console.WriteLine(userInput.Trim().ToLower());
-}
+  Console.Write("Inform your role: ");
+  userInput = Console.ReadLine();
 
-Console.WriteLine(userInput);
+  if (userInput != null)
+  {
+    switch (userInput.Trim().ToLower())
+    {
+      case "administrator":
+      case "manager":
+      case "user":
+        validInput = true;
+        formattedInput = userInput.Trim().ToLower();
+        continue;
+      default:
+        Console.WriteLine($"Invalid input: the role {userInput} does not exist.");
+        continue;
+    }    
+  }
+  else
+  {
+    Console.WriteLine("Invalid input: no text was typed.");
+  }
 
-// while (validInput == false)
-// {
-//   userInput = Console.ReadLine();
+} while (validInput == false);
 
-// }
-
-// Estou pensando em usar um switch dentro do while tendo como valor de comparação a entrada do usuário "limpa" pelo uso do Trim() e do ToLower()
-
-// Se a entrada do usuário for validada com sucesso, saímos do loop e imprimimos a mensagem de sucesso
-
-// Implementar em breve
+Console.WriteLine($"Valid input: you are a {formattedInput}");
