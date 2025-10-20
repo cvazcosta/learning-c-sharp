@@ -70,3 +70,128 @@ In this task, you complete a walkthrough of the Starter project code. The Progra
     The final lines of the Program.cs file echo the menu option selection and then pause execution until the Enter key is pressed.
 
 ---
+
+## Convert if statement to switch statement
+
+In this task, you convert the existing if-elseif-else construct to a switch-case construct. A switch statement improves the readability of your code.
+
+1. Scroll up to the start of the for loop that's used to generate your sample data.
+
+2. Notice that the if-elseif-else construct begins with the following if statement and code block:
+
+    ```C#
+    if (i == 0)
+    {
+      animalSpecies = "dog";
+      animalID = "d1";
+      animalAge = "2";
+      animalPhysicalDescription = "medium sized cream colored female golden retriever weighing about 65 pounds. housebroken.";
+      animalPersonalityDescription = "loves to have her belly rubbed and likes to chase her tail. gives lots of kisses.";
+      animalNickname = "lola";
+    }
+    ```
+
+3. Replace the initial if statement and code block with the following code:
+
+    ```C#
+    switch (i)
+    {
+      case 0:
+          animalSpecies = "dog";
+          animalID = "d1";
+          animalAge = "2";
+          animalPhysicalDescription = "medium sized cream colored female golden retriever weighing about 65 pounds. housebroken.";
+          animalPersonalityDescription = "loves to have her belly rubbed and likes to chase her tail. gives lots of kisses.";
+          animalNickname = "lola";
+          break;    
+    ```
+
+    The case 0: code performs the same selection as the if (i == 0) selection that it replaces. You'll be making corresponding replacements to complete the conversion from if-elseif-else construct to a switch-case construct.
+
+4. Notice that a red squiggly line symbol now appears under the ; at the end of the break statement.
+
+    Visual Studio Code uses a red squiggly line to help you spot issues in your code. In this case, there are a few issues. First, you haven't closed the code block for your switch statement. Also, you have an else if without the if, which isn't allowed. You fix each of these issues as you complete the conversion from an if to a switch.
+
+5. Replace the else if (i == 1) statement and code block with the following code:
+
+    ```C#
+    case 1:
+    animalSpecies = "dog";
+    animalID = "d2";
+    animalAge = "9";
+    animalPhysicalDescription = "large reddish-brown male golden retriever weighing about 85 pounds. housebroken.";
+    animalPersonalityDescription = "loves to have his ears rubbed when he greets you at the door, or at any time! loves to lean-in and give doggy hugs.";
+    animalNickname = "loki";
+    break;
+    ```
+
+6. Replace the else if (i == 2) statement and code block with the following code:
+
+    ```C#
+    case 2:
+    animalSpecies = "cat";
+    animalID = "c3";
+    animalAge = "1";
+    animalPhysicalDescription = "small white female weighing about 8 pounds. litter box trained.";
+    animalPersonalityDescription = "friendly";
+    animalNickname = "Puss";
+    break;
+    ```
+
+7. Replace the else if (i == 3) statement and code block with the following code:
+
+    ```C#
+    case 3:
+        animalSpecies = "cat";
+        animalID = "c4";
+        animalAge = "?";
+        animalPhysicalDescription = "";
+        animalPersonalityDescription = "";
+        animalNickname = "";
+        break;
+    ```
+
+8. Replace the else statement and code block with the following code:
+
+    ```C#
+    default:
+        animalSpecies = "";
+        animalID = "";
+        animalAge = "";
+        animalPhysicalDescription = "";
+        animalPersonalityDescription = "";
+        animalNickname = "";
+        break;
+    }
+    ```
+
+9. Notice that the if-elseif-else construct is now completely replaced by a switch-case construct and that the red squiggly line symbol is gone.
+
+    If portions of your if-elseif-else construct still remain, or if your switch statement is incomplete, check to see if you missed a step.
+
+10. Your completed switch-case construct should have a structure similar to the following code:
+
+```C#
+switch (i)
+{
+    case 0:
+        // variable assignments were removed for this view of the structure
+        break;
+
+    case 1:
+        // variable assignments were removed for this view of the structure
+        break;
+
+    case 2:
+        // variable assignments were removed for this view of the structure
+        break;
+
+    case 3:
+        // variable assignments were removed for this view of the structure
+        break;
+
+    default:
+        // variable assignments were removed for this view of the structure
+        break;
+}
+```
