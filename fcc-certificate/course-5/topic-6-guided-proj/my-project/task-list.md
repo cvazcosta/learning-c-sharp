@@ -13,3 +13,11 @@
 - [x] Data check: write code that checks for existing pet data and displays the pet ID if data exists for a pet.
 - [x] Inner loop: build an inner loop that displays all of the pet characteristics for pets with data assigned.
 - [x] Verification test: perform verification tests for the code that you develop in this exercise.
+
+## Build a test loop for entering new pet data
+
+- [x] Calculate `petCount`: write code that counts the number of pets in the `ourAnimals` array that have assigned data.
+- [x] Conditional messages: write code to display message output when `petCount` is less than `maxPets`.
+- [ ] Outer loop: build a loop structure that will be used for entering new `ourAnimals` array data.
+- [ ] Exit criteria: write code that evaluates the exit condition for the "enter new `ourAnimals` array data" loop.
+- [ ] Verification test: perform verification tests for the code you develop in this exercise.
