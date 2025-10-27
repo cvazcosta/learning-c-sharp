@@ -18,6 +18,16 @@
 
 - [x] Calculate `petCount`: write code that counts the number of pets in the `ourAnimals` array that have assigned data.
 - [x] Conditional messages: write code to display message output when `petCount` is less than `maxPets`.
-- [ ] Outer loop: build a loop structure that will be used for entering new `ourAnimals` array data.
-- [ ] Exit criteria: write code that evaluates the exit condition for the "enter new `ourAnimals` array data" loop.
-- [ ] Verification test: perform verification tests for the code you develop in this exercise.
+- [x] Outer loop: build a loop structure that will be used for entering new `ourAnimals` array data.
+- [x] Exit criteria: write code that evaluates the exit condition for the "enter new `ourAnimals` array data" loop.
+- [x] Verification test: perform verification tests for the code you develop in this exercise.
+  
+## Write code to read and save new ourAnimals array data
+
+- [x] Read and validate species: build a loop and the inner code structure used to enter and validate the pet species.
+- [x] Construct pet ID: write the code that uses petCount and the species name to construct the petID value.
+- [x] Read and validate age: build a loop and the inner code structure used to enter and validate the pet's age.
+- [x] Read and validate physical description: build a loop and the inner code structure used to enter a physical description of the pet.
+- [x] Read and validate personality description: build a loop and the inner code structure used to enter a description of the pet's personality.
+- [ ] Read and validate nickname: build a loop and the inner code structure used to enter a nickname for the pet.
+- [ ] Verification test: perform verification tests for the code that you develop in this exercise.
