@@ -15,12 +15,12 @@
 
 // Fazendo um type cast do tipo narrowing conversion
 
-// decimal myDecimal = 3.14m;
-// Console.WriteLine($"decimal: {myDecimal}");
+decimal myDecimal = 3.14m;
+Console.WriteLine($"decimal: {myDecimal}");
 
-// int myInt = (int)myDecimal;
-// Console.WriteLine($"int: {myInt}");
-// Console.WriteLine(myDecimal.GetType());
+int myInt = (int)myDecimal;
+Console.WriteLine($"int: {myInt}");
+Console.WriteLine(myDecimal.GetType());
 
 // Outro exemplo de narrowing conversion
 
@@ -54,8 +54,22 @@
 // Console.WriteLine(result);
 
 // Vendo como casting e converting tratam uma conversão de decimal em int
-int value = (int)1.5m;
-Console.WriteLine(value); // resultado é truncado p/ 1
+// int value = (int)1.5m;
+// Console.WriteLine(value); // resultado é truncado p/ 1
 
-int value2 = Convert.ToInt32(1.5m); // resultado é arredondado p/ 2
-Console.WriteLine(value2);
+// int value2 = Convert.ToInt32(1.5m); // resultado é arredondado p/ 2
+// Console.WriteLine(value2);
+
+// Testando TryParse()
+
+string value = "102";
+int result = 0;
+
+if (int.TryParse(value, out result))
+{
+  Console.WriteLine($"Measurement: {result}");
+}
+else
+{
+  Console.WriteLine("Unable to report the measurement.");
+}
