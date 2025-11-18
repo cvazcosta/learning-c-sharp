@@ -111,27 +111,37 @@
 // Unit 5 - Exercise
 const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
 
-string quantity = "";
-string output = "";
-
-// Your work here
+string quantity;
+string output;
 
 const string openSpan = "<span>";
 
 int openingPosition = input.IndexOf("<span>"); 
 int closingPosition = input.IndexOf("</span>");
 
-Console.WriteLine($"openingPosition: {openingPosition}");
-Console.WriteLine($"closingPosition: {closingPosition}");
+// Logs para debug e compreensão do funcionamento das funções
+// Console.WriteLine($"openingPosition: {openingPosition}");
+// Console.WriteLine($"closingPosition: {closingPosition}");
 
 // Necessário para que a posição inicial parta do índice imediatamente após <span>
 openingPosition += openSpan.Length;
-Console.WriteLine($"openingPosition after adding <span> length: {openingPosition}");
+// Console.WriteLine($"openingPosition after adding <span> length: {openingPosition}");
 
 int length = closingPosition - openingPosition;
-Console.WriteLine($"length: {length}");
+// Console.WriteLine($"length: {length}");
 
 quantity = input.Substring(openingPosition, length);
+
+// Resolvendo a variável output
+const string openDiv = "<div>";
+
+openingPosition = input.IndexOf("<div>");
+closingPosition = input.IndexOf("</div>");
+openingPosition += openDiv.Length;
+
+length = closingPosition - openingPosition;
+
+output = input.Substring(openingPosition, length).Replace("&trade;", "&reg;");
 
 Console.WriteLine($"Quantity: {quantity}");
 Console.WriteLine($"Output: {output}");
