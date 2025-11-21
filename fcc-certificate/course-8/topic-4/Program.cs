@@ -149,6 +149,10 @@ do
 
       // Armazenando termos de busca no array e ordenando-os de forma crescente
       string[] dogCharacteristics = dogCharacteristic.Split(',');
+      for (int i = 0; i < dogCharacteristics.Length; i++)
+      {
+        dogCharacteristics[i] = dogCharacteristics[i].Trim();
+      }
       Array.Sort(dogCharacteristics);
 
       bool noMatchesDog = true;
